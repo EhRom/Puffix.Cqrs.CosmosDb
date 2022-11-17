@@ -24,4 +24,4 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     - name: Publish Nuget Package
-      run: dotnet nuget push /home/runner/work/Puffix.Cqrs.CosmosDb/Puffix.Cqrs/Puffix.Cqrs.CosmosDb/bin/Release/Puffix.Cqrs.CosmosDb.3.1.0.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+      run: dotnet nuget push /home/runner/work/Puffix.Cqrs.CosmosDb/Puffix.Cqrs.CosmosDb/Puffix.Cqrs.CosmosDb/bin/Release/Puffix.Cqrs.CosmosDb.3.1.0.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
