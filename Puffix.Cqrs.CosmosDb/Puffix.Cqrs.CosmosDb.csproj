@@ -7,14 +7,14 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Authors>Puffix.io - Romain Ehret</Authors>
 		<Company>Puffix.io - Romain Ehret</Company>
-		<Description>CQRS framework implementation.</Description>
+		<Description>Cosmos DB extension for repositories in Puffix CQRS framework implementation.</Description>
 		<Copyright>Copyright 2022 (c) Puffix / Romain Ehret. All rights reserved.</Copyright>
 		<PackageLicenseFile>Licence.txt</PackageLicenseFile>
-		<PackageProjectUrl>https://github.com/EhRom/Puffix.Cqrs</PackageProjectUrl>
+		<PackageProjectUrl>https://github.com/EhRom/Puffix.Cqrs.CosmosDb</PackageProjectUrl>
 		<PackageIcon>icon.png</PackageIcon>
-		<RepositoryUrl>https://github.com/EhRom/Puffix.Cqrs</RepositoryUrl>
-		<PackageTags>CQRS Puffix Framework</PackageTags>
-		<PackageReleaseNotes>CQRS framework implementation.</PackageReleaseNotes>
+		<RepositoryUrl>https://github.com/EhRom/Puffix.Cqrs.CosmosDb</RepositoryUrl>
+		<PackageTags>CQRS Puffix Framework CosmosDB</PackageTags>
+		<PackageReleaseNotes>Cosmos DB extension for repositories in Puffix CQRS framework implementation.</PackageReleaseNotes>
 		<Version>3.1.0</Version>
 		<AssemblyVersion>3.1.0.0</AssemblyVersion>
 		<AssemblyFileVersion>3.1.0.0</AssemblyFileVersion>
