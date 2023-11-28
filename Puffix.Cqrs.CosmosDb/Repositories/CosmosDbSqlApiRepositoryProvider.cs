@@ -63,7 +63,7 @@ public class CosmosDbSqlApiRepositoryProvider<AggregateImplementationT, Aggregat
         return collection.First();
     }
 
-    public async Task<AggregateT?> GetByIdOrDefaultAsync(IndexT id)
+    public async Task<AggregateT> GetByIdOrDefaultAsync(IndexT id)
     {
         ICollection<AggregateT> collection = await BaseGetByIdAsync(id);
         return collection.FirstOrDefault();
@@ -104,11 +104,11 @@ public class CosmosDbSqlApiRepositoryProvider<AggregateImplementationT, Aggregat
         ItemResponse<AggregateImplementationT> itemResponse = await container.DeleteItemAsync<AggregateImplementationT>($"{aggregate.Id}", new PartitionKey(aggregate.PartitionKey));
     }
 
-    public async Task<IndexT> GetNextAggregatetIdAsync(Func<IndexT?, IndexT> generateNextId)
+    public async Task<IndexT> GetNextAggregatetIdAsync(Func<IndexT, IndexT> generateNextId)
     {
         await Task.CompletedTask;
 
-        IndexT? lastId = default;
+        IndexT lastId = default;
 
         IndexT nextId = generateNextId(lastId);
         ArgumentNullException.ThrowIfNull(nextId);

@@ -22,7 +22,7 @@ public class CosmosDbSqlApiRepositoriesConfiguration : IRepositoriesConfiguratio
         Type cosmosDbSqlApiRepositoryProviderType = typeof(CosmosDbSqlApiRepositoryProvider<,,>).MakeGenericType(aggregateInfo.ImplementationType, aggregateInfo.AggregateType, aggregateInfo.IndexType);
         ArgumentNullException.ThrowIfNull(cosmosDbSqlApiRepositoryProviderType);
 
-        ConstructorInfo? contructorInfo = cosmosDbSqlApiRepositoryProviderType.GetConstructor(new[] { typeof(ICosmosDbSqlApiContext), typeof(AggregateInfo) });
+        ConstructorInfo contructorInfo = cosmosDbSqlApiRepositoryProviderType.GetConstructor([typeof(ICosmosDbSqlApiContext), typeof(AggregateInfo)]);
         ArgumentNullException.ThrowIfNull(contructorInfo);
 
         IRepositoryProvider<AggregateImplementationT, AggregateT, IndexT> repositoryProvider = (IRepositoryProvider<AggregateImplementationT, AggregateT, IndexT>)contructorInfo.Invoke(new object[] { cosmosDbSqlApiContext, aggregateInfo }); ;

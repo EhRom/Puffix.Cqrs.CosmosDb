@@ -13,7 +13,7 @@ public class CosmosDbSqlApiContext : ICosmosDbSqlApiContext
     private readonly string databaseName;
     private readonly string containerName;
     private readonly string partitionKeyName;
-    private Container? container;
+    private Container container;
 
     public Container Container => container!;
 
